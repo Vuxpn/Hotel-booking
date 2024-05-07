@@ -22,7 +22,7 @@ export default function IndexPage() {
                 }}
                 className="rounded-3xl shadow-lg text-center py-36 mt-5 px-3"
             >
-                <h1 className="text-5xl font-bold text-white pb-2">Book your stay with PNV</h1>
+                <h1 className="text-5xl font-bold text-white pb-2">Book your stay Vuongle</h1>
                 <h2 className="text-2xl text-white opacity-90">
                     1,480,000 rooms around the world are waiting for you!
                 </h2>
