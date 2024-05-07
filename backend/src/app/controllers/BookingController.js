@@ -75,44 +75,7 @@ class BookingController {
         })
     }
 
-    /* //[Get] /course/:id/edit
-    edit(req, res, next) {
-        Course.findById(req.params.id)
-            .then((course) =>
-                res.render('courses/edit', {
-                    course: mongooseToObject(course),
-                }),
-            )
-            .catch(next);
-    }
 
-    //[PUT] /course/:id
-    update(req, res, next) {
-        Course.updateOne({ _id: req.params.id }, req.body)
-            .then((course) => res.redirect('/me/stored/courses'))
-            .catch(next);
-    }
-
-    //[Delete] /course/:id
-    destroy(req, res, next) {
-        Course.delete({ _id: req.params.id })
-            .then(() => res.redirect('back'))
-            .catch(next)
-    }
-
-    //[Delete] /course/:id/force
-    forceDestroy(req, res, next) {
-        Course.deleteOne({ _id: req.params.id })
-            .then(() => res.redirect('back'))
-            .catch(next)
-    }
-
-    //[Patch] /course/:id/restore
-    restore(req, res, next) {
-        Course.restore({ _id: req.params.id })
-            .then(() => res.redirect('back'))
-            .catch(next)
-    } */
 }
 
 module.exports = new BookingController();
