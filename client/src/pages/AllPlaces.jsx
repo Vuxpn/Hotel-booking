@@ -37,7 +37,7 @@ export default function AllPlaces() {
     return (
         <div>
             <h1 className="lg:mx-24 mx-16 font-semibold text-2xl">All hotels</h1>
-            <div className="lg:mx-20 mx-10 my-10 mt-6 grid gap-x-6 gap-y-8 grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
+            <div className="lg:mx-20 mx-10 my-10 mt-6 grid gap-x-6 gap-y-8 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
                 {places.length > 0 &&
                     places.map((place) => (
                         <div key={place._id}>
