@@ -71,8 +71,29 @@ export default function RegisterPage() {
                 placeholder={"First name"}
                 value={firstName}
                 onChange={(ev) => setFirstName(ev.target.value)}
-           
-         
+              />
+              <input
+                className="input-log"
+                type="text"
+                placeholder={"Last name"}
+                value={lastName}
+                onChange={(ev) => setLastName(ev.target.value)}
+              />
+            </div>
+            <label className="text-m font-medium text-gray-900"></label>
+            <label className="text-m font-medium text-gray-900">
+              {"Your email"}
+            </label>
+            <input
+              className="input-log"
+              type="email"
+              placeholder={"your@email.com"}
+              value={email}
+              onChange={(ev) => setEmail(ev.target.value)}
+            />
+            <label className="text-m font-medium text-gray-900">
+              {"Your password"}
+            </label>
             <input
               className="input-log"
               type="password"

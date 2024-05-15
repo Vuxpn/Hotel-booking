@@ -52,12 +52,12 @@ export default function BookingWidget({ place }) {
   return (
     <div className="bg-white p-4 rounded-2xl border-2 border-gray-100 drop-shadow-xl">
       <div className="text-2xl text-center">
-        Price: ${place.price} / per night
+        Giá: ${place.price} / 1 đêm
       </div>
       <div className="border rounded-2xl mt-4">
         <div className="flex">
           <div className="py-3 px-4">
-            <label>Check in:</label>
+            <label>Ngày nhận phòng:</label>
             <input
               type="date"
               value={checkIn}
@@ -65,7 +65,7 @@ export default function BookingWidget({ place }) {
             />
           </div>
           <div className="py-3 px-4 border-l">
-            <label>Check out:</label>
+            <label>Ngày trả phòng:</label>
             <input
               type="date"
               value={checkOut}
@@ -74,7 +74,7 @@ export default function BookingWidget({ place }) {
           </div>
         </div>
         <div className="py-3 px-4 border-t">
-          <label>Number of guests:</label>
+          <label>Số lượng khách:</label>
           <input
             className="w-full border my-1 py-2 px-3 rounded-xl"
             type="number"
@@ -85,14 +85,14 @@ export default function BookingWidget({ place }) {
         </div>
         {numberOfNights > 0 && (
           <div className="py-3 px-4 border-t">
-            <label>Your full name:</label>
+            <label>Họ và tên:</label>
             <input
               className="w-full border my-1 py-2 px-3 rounded-xl"
               type="text"
               value={name}
               onChange={(ev) => setName(ev.target.value)}
             />
-            <label>Phone number:</label>
+            <label>Số điện thoại:</label>
             <input
               className="w-full border my-1 py-2 px-3 rounded-xl"
               type="tel"
@@ -106,7 +106,7 @@ export default function BookingWidget({ place }) {
         onClick={bookThisPlace}
         className="mt-4 gap-1 py-2 px-6 rounded-full bg-primary text-white w-full text-center"
       >
-        Book this place
+        Đặt phòng
         {numberOfNights > 0 && <span> ${numberOfNights * place.price}</span>}
       </button>
     </div>

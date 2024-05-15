@@ -22,13 +22,13 @@ export default function IndexPage() {
                 }}
                 className="rounded-3xl shadow-lg text-center py-36 mt-5 px-3"
             >
-                <h1 className="text-5xl font-bold text-white pb-2">Book your stay Vuongle</h1>
+                <h1 className="text-5xl font-bold text-white pb-2">Đặt phòng với TravelBooking </h1>
                 <h2 className="text-2xl text-white opacity-90">
-                    1,480,000 rooms around the world are waiting for you!
+                    1.480.000 phòng trên khắp thế giới đang chờ bạn!
                 </h2>
             </div>
             <div className="mt-5">
-                <h1 className="text-2xl font-semibold">Popular destinations</h1>
+                <h1 className="text-2xl font-semibold">Điểm đến phổ biến</h1>
                 <div className="grid md:grid-cols-4 grid-cols-2 mt-5 gap-6">
                     <Link
                         to={'/find/Ha noi'}
@@ -41,7 +41,7 @@ export default function IndexPage() {
                         }}
                     >
                         <div className="pt-3 flex pb-3 pl-3">
-                            <h1 className="px-3 rounded-xl bg-gray-100 bg-opacity-50 font-medium">Ha Noi</h1>
+                            <h1 className="px-3 rounded-xl bg-gray-100 bg-opacity-50 font-medium">Hà Nội</h1>
                         </div>
                     </Link>
                     <div className="grid-rows-2">
@@ -69,7 +69,7 @@ export default function IndexPage() {
                         >
                             <Link to="/find/Ho Chi Minh" className="pt-28 flex pb-3 pl-3">
                                 <h1 className="px-3 rounded-xl bg-gray-100 bg-opacity-50 font-medium">
-                                    Ho Chi Minh city
+                                    Thành phố Hồ Chí Minh
                                 </h1>
                             </Link>
                         </div>
@@ -85,7 +85,7 @@ export default function IndexPage() {
                         }}
                     >
                         <div className="pt-3 flex pb-3 pl-3">
-                            <h1 className="px-3 rounded-xl bg-gray-100 bg-opacity-50 font-medium">Da Nang</h1>
+                            <h1 className="px-3 rounded-xl bg-gray-100 bg-opacity-50 font-medium">Đà Nẵng</h1>
                         </div>
                     </Link>
                     <div className="grid-rows-2 grid-flow-row">
@@ -112,14 +112,14 @@ export default function IndexPage() {
                             }}
                         >
                             <Link to="/find/Phu Quoc" className="pt-48 flex pb-3 pl-3">
-                                <h1 className="px-3 rounded-xl bg-gray-100 bg-opacity-50 font-medium">Phu Quoc</h1>
+                                <h1 className="px-3 rounded-xl bg-gray-100 bg-opacity-50 font-medium">Phú Quốc</h1>
                             </Link>
                         </div>
                     </div>
                 </div>
             </div>
             <div className="mt-5">
-                <h1 className="text-2xl font-semibold">Hotels loved by guests</h1>
+                <h1 className="text-2xl font-semibold">Khánh sạn được yêu thích</h1>
                 <div className="mt-6 grid gap-x-4 gap-y-8 grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
                     {places.length > 0 &&
                         places.map((doc) => (
@@ -161,7 +161,7 @@ export default function IndexPage() {
                         ))}
                 </div>
                 <Link to="/all" className="flex float-right my-5 cursor-pointer ">
-                    <h1 className="pr-1 hover:underline">See all hotels</h1>
+                    <h1 className="pr-1 hover:underline">Xem tất cả khách sạn</h1>
                     <span className="material-symbols-outlined">arrow_right_alt</span>
                 </Link>
             </div>

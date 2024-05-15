@@ -53,11 +53,11 @@ export default function ProfilePage() {
         <div className="flex justify-center pt-10 px-10">
           <div className="border-r-2 px-10">
             <h1 className="font-semibold lg:text-2xl lg:pb-6 md:pb-2 md:text-xl">
-              Profile settings
+              Cài đặt tài khoản
             </h1>
             <Link className={linkClasses("profile")} to={"/account/profile"}>
               <span className="material-symbols-outlined">person</span>
-              <h1 className="font-semibold">Details</h1>
+              <h1 className="font-semibold">Thông tin chi tiết</h1>
             </Link>
             <Link
               className={linkClasses("payment")}
@@ -66,36 +66,36 @@ export default function ProfilePage() {
               <span className="material-symbols-outlined">
                 account_balance_wallet
               </span>{" "}
-              <h1 className="font-semibold ">Payment</h1>
+              <h1 className="font-semibold ">Thanh toán</h1>
             </Link>
             <Link
               className={linkClasses("safety")}
               to={"/account/profile/safety"}
             >
               <span className="material-symbols-outlined">encrypted</span>
-              <h1 className="font-semibold ">Safety</h1>
+              <h1 className="font-semibold ">Bảo mật</h1>
             </Link>
             <Link
               className={linkClasses("preference")}
               to={"/account/profile/preference"}
             >
               <span className="material-symbols-outlined">settings</span>
-              <h1 className="font-semibold ">Preferences</h1>
+              <h1 className="font-semibold ">Cài đặt</h1>
             </Link>
             <Link
               className={linkClasses("notification")}
               to={"/account/profile/notification"}
             >
               <span className="material-symbols-outlined">notifications</span>
-              <h1 className="font-semibold ">Notifications</h1>
+              <h1 className="font-semibold ">Thông báo</h1>
             </Link>
           </div>
           <div className="lg:w-2/5 w-2/3">
             {subpage === "profile" && (
               <div className="px-10 md:px-32">
-                <h1 className="text-3xl font-semibold">Personal details</h1>
+                <h1 className="text-3xl font-semibold">Thông tin cá nhân</h1>
                 <h2 className="text-slate-500 pt-1">
-                  Edit your personal details
+                  Sửa thông tin cá nhân của bạn
                 </h2>
                 <img
                   className="h-32 border-2 rounded-full my-8"
@@ -105,13 +105,13 @@ export default function ProfilePage() {
                 <table className="table-auto">
                   <tbody>
                     <tr>
-                      <td className="font-semibold">First name: </td>
+                      <td className="font-semibold">Họ và tênd đệm: </td>
                       <td className="capitalize pl-10 md:pl-20 text-slate-500">
                         {userDoc[0].firstName}
                       </td>
                     </tr>
                     <tr>
-                      <td className="font-semibold ">Last name: </td>
+                      <td className="font-semibold ">Tên: </td>
                       <td className="capitalize pl-10 md:pl-20 text-slate-500">
                         {userDoc[0].lastName}
                       </td>
@@ -128,22 +128,22 @@ export default function ProfilePage() {
             )}
             {subpage === "payment" && (
               <div className="px-10 md:px-32">
-                <h1 className="text-3xl font-semibold">Payment information</h1>
+                <h1 className="text-3xl font-semibold">Thông tin thanh toán</h1>
               </div>
             )}
             {subpage === "safety" && (
               <div className="px-10 md:px-32">
-                <h1 className="text-3xl font-semibold">Safety</h1>
+                <h1 className="text-3xl font-semibold">Bảo mật</h1>
               </div>
             )}
             {subpage === "preference" && (
               <div className="px-10 md:px-32">
-                <h1 className="text-3xl font-semibold">Preferences</h1>
+                <h1 className="text-3xl font-semibold">Cài đặt</h1>
               </div>
             )}
             {subpage === "notification" && (
               <div className="px-10 md:px-32">
-                <h1 className="text-3xl font-semibold">Notification</h1>
+                <h1 className="text-3xl font-semibold">Thông báo</h1>
               </div>
             )}
           </div>
@@ -155,7 +155,7 @@ export default function ProfilePage() {
           onClick={logout}
         >
           <span className="material-symbols-outlined">logout</span>
-          <h1 className="font-semibold ">Log out</h1>
+          <h1 className="font-semibold ">Đăng xuất</h1>
         </button>
       </div>
     </div>

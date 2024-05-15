@@ -7,7 +7,7 @@ const morgan = require('morgan');
 const handlebars = require('express-handlebars');
 const path = require('path');
 const cors = require('cors');
-const route = require('./routes/index');
+const route = require('./routes');
 const db = require('./config/db');
 const cookieParser = require('cookie-parser');
 
