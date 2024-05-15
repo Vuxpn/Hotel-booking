@@ -34,13 +34,13 @@ export default function Header() {
                         value={find}
                         onChange={(ev) => setFind(ev.target.value)}
                         type="text"
-                        className="bg-gray-50 border border-gray-300 text-gray-900  rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full px-10 py-1 sm:py-2"
+                        className="bg-gray-50 border border-gray-300 text-gray-900  rounded-full focus:ring-primary focus:border-primary block w-full px-10 py-1 sm:py-2"
                         placeholder="Tìm kiếm điểm đến của bạn..."
                     />
                 </div>
                 <button
                     type="submit"
-                    className="inline-flex items-center p-1 sm:p-2 ml-2 text-sm font-medium text-white bg-blue-700 rounded-full border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 "
+                    className="inline-flex items-center p-1 sm:p-2 ml-2 text-sm font-medium text-white bg-primary rounded-full border hover:bg-primary focus:ring-4 focus:outline-none "
                 >
                     <span className="material-symbols-outlined">search</span>
                 </button>
