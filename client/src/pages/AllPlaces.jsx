@@ -34,12 +34,12 @@ export default function AllPlaces() {
 
     return (
         <div>
-            <h1 className="lg:mx-24 mx-16 font-semibold text-2xl">All hotels</h1>
+            <h1 className="lg:mx-24 mx-16 text-3xl font-bold text-primary">Tất cả khách sạn</h1>
             <div className="lg:mx-20 mx-10 my-10 mt-6 grid gap-x-6 gap-y-8 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
                 {places.length > 0 &&
                     places.map((place) => (
                         <div key={place._id}>
-                            <div className="border-2 p-4 rounded-xl shadow-lg">
+                            <div className=" p-4 rounded-xl shadow-lg border border-primary">
                                 <Link to={'/place/' + place._id}>
                                     <div className="bg-gray-500 mb-2 rounded-2xl flex">
                                         {place.photos?.[0] && (
@@ -58,14 +58,25 @@ export default function AllPlaces() {
                                         )}
                                     </div>
                                     <div className="h-24">
-                                        <h2 className="font-bold">{place.title}</h2>
-                                        <h3 className="text-sm text-gray-500">{place.address}</h3>
+                                        <h2
+                                            className="font-bold text-primary"
+                                            style={{
+                                                width: '200px',
+                                                overflow: 'hidden',
+                                                textOverflow: 'ellipsis',
+                                                whiteSpace: 'nowrap',
+                                            }}
+                                        >
+                                            {place.title}
+                                        </h2>
+                                        <br />
+                                        <h3 className="text-sm flex justify-between">{place.address}</h3>
                                     </div>
                                 </Link>
                                 <div className="mt-1 flex justify-between items-end">
                                     <div>
-                                        <span className="font-bold">${place.price}</span>
-                                        /night
+                                        <span className="font-bold text-primary ">${place.price}</span>
+                                        <span className="font-bold text-primary">/đêm</span>
                                     </div>
                                     {!wishlist.includes(place._id) && (
                                         <svg

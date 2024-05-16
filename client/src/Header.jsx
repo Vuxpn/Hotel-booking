@@ -27,14 +27,14 @@ export default function Header() {
             </Link>
             <form className="flex items-center sm:w-2/5 sm:mx-10" action={find.trim() !== '' ? '/find/' + find : '#'}>
                 <div className="relative w-full">
-                    <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                    <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-primary">
                         <span className="material-symbols-outlined">search</span>
                     </div>
                     <input
                         value={find}
                         onChange={(ev) => setFind(ev.target.value)}
                         type="text"
-                        className="bg-gray-50 border border-gray-300 text-gray-900  rounded-full focus:ring-primary focus:border-primary block w-full px-10 py-1 sm:py-2"
+                        className="bg-gray-50 border border-primary text-gray-900  rounded-full focus:ring-primary active:border-primary block w-full px-10 py-1 sm:py-2"
                         placeholder="Tìm kiếm điểm đến của bạn..."
                     />
                 </div>
@@ -62,7 +62,7 @@ export default function Header() {
                                 {userInfo.user['email']}
                             </h1>
                             <img
-                                className="h-12 border-2 rounded-full"
+                                className="h-12 border-2 rounded-full border-primary"
                                 src="https://i.pinimg.com/originals/39/a4/71/39a47159059f38a954d77e5dcae6f0db.jpg"
                                 alt="avatar"
                             />

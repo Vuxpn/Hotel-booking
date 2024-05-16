@@ -79,7 +79,7 @@ export default function IndexPage() {
                         backgroundRepeat: 'no-repeat',
                         backgroundSize: 'cover',
                     }}
-                    className="rounded-3xl shadow-lg text-center py-36 mt-5 px-3"
+                    className="rounded-3xl shadow-lg text-center py-36 mt-5 px-3 "
                 >
                     <h1 className="text-5xl font-bold text-white pb-2">Đặt phòng với TravelBooking </h1>
                     <h2 className="text-2xl  text-white opacity-90">
@@ -88,10 +88,10 @@ export default function IndexPage() {
                 </div>
                 <div className="mt-5">
                     <h1 className="text-3xl font-bold text-primary">Điểm đến phổ biến</h1>
-                    <div className="grid md:grid-cols-4 grid-cols-2 mt-5 gap-6 border-primary">
+                    <div className="grid md:grid-cols-4 grid-cols-2 mt-5 gap-6">
                         <Link
                             to={'/find/Ha noi'}
-                            className="rounded-3xl shadow-lg"
+                            className="rounded-3xl shadow-lg border border-primary"
                             style={{
                                 backgroundImage: `url("https://vcdn1-dulich.vnecdn.net/2022/05/11/hoan-kiem-lake-7673-1613972680-1508-1652253984.jpg?w=0&h=0&q=100&dpr=1&fit=crop&s=2wB1cBTUcNKuk68nrG6LMQ")`,
                                 backgroundPosition: 'center',
@@ -99,15 +99,15 @@ export default function IndexPage() {
                                 backgroundSize: 'cover',
                             }}
                         >
-                            <div className="pt-3 flex pb-3 pl-3">
-                                <h1 className="px-3 rounded-xl bg-gray-100 bg-opacity-50 font-medium border-primary">
+                            <div className="pt-3 flex pb-3 pl-3 ">
+                                <h1 className="px-3 rounded-xl bg-gray-100 bg-opacity-100 text-primary font-bold border border-primary">
                                     Hà Nội
                                 </h1>
                             </div>
                         </Link>
-                        <div className="grid-rows-2">
+                        <div className="grid-rows-2 ">
                             <div
-                                className="rounded-3xl shadow-lg"
+                                className="rounded-3xl shadow-lg border border-primary"
                                 style={{
                                     backgroundImage: `url("https://statics.vinpearl.com/nha-trang-beaches-banner%20-%20Copy_1660569595.jpg")`,
                                     backgroundPosition: 'center',
@@ -116,13 +116,14 @@ export default function IndexPage() {
                                 }}
                             >
                                 <Link to={'/find/Nha Trang'} className="pt-52 flex pb-3 pl-3 mb-4 ">
-                                    <h1 className="px-3 rounded-xl bg-gray-100 bg-opacity-50 font-medium ">
+                                    <h1 className="px-3 rounded-xl bg-gray-100 bg-opacity-100 text-primary font-bold border border-primary ">
                                         Nha Trang
                                     </h1>
                                 </Link>
                             </div>
+                            <br />
                             <div
-                                className="rounded-3xl shadow-lg"
+                                className="rounded-3xl shadow-lg border border-primary"
                                 style={{
                                     backgroundImage: `url("https://cdnmedia.baotintuc.vn/Upload/c2tvplmdloSDblsn03qN2Q/files/2020/11/04/thanh-pho-thu-duc-tp-ho-chi-minh-41120.jpg")`,
                                     backgroundPosition: 'center',
@@ -131,7 +132,7 @@ export default function IndexPage() {
                                 }}
                             >
                                 <Link to="/find/Ho Chi Minh" className="pt-28 flex pb-3 pl-3">
-                                    <h1 className="px-3 rounded-xl bg-gray-100 bg-opacity-50 font-medium">
+                                    <h1 className="px-3 rounded-xl bg-gray-100 bg-opacity-100 text-primary font-bold border border-primary">
                                         Thành phố Hồ Chí Minh
                                     </h1>
                                 </Link>
@@ -139,7 +140,7 @@ export default function IndexPage() {
                         </div>
                         <Link
                             to="/find/Da Nang"
-                            className="rounded-3xl shadow-lg"
+                            className="rounded-3xl shadow-lg border border-primary"
                             style={{
                                 backgroundImage: `url("https://res.klook.com/image/upload/fl_lossy.progressive,w_800,c_fill,q_85/destination/ur2mrg23d91mex03l4mw.jpg")`,
                                 backgroundPosition: 'center',
@@ -148,12 +149,14 @@ export default function IndexPage() {
                             }}
                         >
                             <div className="pt-3 flex pb-3 pl-3">
-                                <h1 className="px-3 rounded-xl bg-gray-100 bg-opacity-50 font-medium">Đà Nẵng</h1>
+                                <h1 className="px-3 rounded-xl bg-gray-100 bg-opacity-100 text-primary font-bold border border-primary">
+                                    Đà Nẵng
+                                </h1>
                             </div>
                         </Link>
-                        <div className="grid-rows-2 grid-flow-row">
+                        <div className="grid-rows-2 grid-flow-row ">
                             <div
-                                className="rounded-3xl shadow-lg"
+                                className="rounded-3xl shadow-lg border border-primary "
                                 style={{
                                     backgroundImage: `url("https://vcdn1-dulich.vnecdn.net/2022/04/18/dulichSaPa-1650268886-1480-1650277620.png?w=0&h=0&q=100&dpr=2&fit=crop&s=JTUw8njZ_Glkqf1itzjObg")`,
                                     backgroundPosition: 'center',
@@ -162,20 +165,26 @@ export default function IndexPage() {
                                 }}
                             >
                                 <Link to="/find/Sa Pa" className="pt-32 flex pb-3 pl-3 mb-4">
-                                    <h1 className="px-3 rounded-xl bg-gray-100 bg-opacity-50 font-medium">Sa Pa</h1>
+                                    <h1 className="px-3 rounded-xl bg-gray-100 bg-opacity-100 text-primary font-bold border border-primary">
+                                        Sa Pa
+                                    </h1>
                                 </Link>
                             </div>
+                            <br />
                             <div
-                                className="rounded-3xl shadow-lg"
+                                className="rounded-3xl shadow-lg border border-primary"
                                 style={{
                                     backgroundImage: `url("https://nld.mediacdn.vn/291774122806476800/2021/11/26/cap-treo-hon-thom-02-1637912751786500410806.jpg")`,
                                     backgroundPosition: 'center',
                                     backgroundRepeat: 'no-repeat',
                                     backgroundSize: 'cover',
+                                    // border: '2px solid primary',
                                 }}
                             >
                                 <Link to="/find/Phu Quoc" className="pt-48 flex pb-3 pl-3">
-                                    <h1 className="px-3 rounded-xl bg-gray-100 bg-opacity-50 font-medium">Phú Quốc</h1>
+                                    <h1 className="px-3 rounded-xl bg-gray-100 bg-opacity-100 text-primary font-bold border border-primary ">
+                                        Phú Quốc
+                                    </h1>
                                 </Link>
                             </div>
                         </div>
