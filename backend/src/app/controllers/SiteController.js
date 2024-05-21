@@ -27,19 +27,49 @@ class SiteController {
     //[POST] /register
     async register(req, res) {
         const { firstName, lastName, email, password } = req.body;
+    
+        // Log dữ liệu nhận được từ client
+        console.log('Request body:', req.body);
+    
+        if (!firstName || !lastName || !email || !password) {
+            console.log('Validation error: Missing fields');
+            return res.status(422).json({ error: 'All fields are required' });
+        }
+    
+        // Kiểm tra xem email có hợp lệ không
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            console.log('Validation error: Invalid email format');
+            return res.status(422).json({ error: 'Invalid email format' });
+        }
+    
         try {
+            // Kiểm tra xem email đã tồn tại trong cơ sở dữ liệu chưa
+            const existingUser = await User.findOne({ email });
+            if (existingUser) {
+                console.log('Validation error: Email already exists');
+                return res.status(422).json({ error: 'Email already exists' });
+            }
+    
+            // Hash mật khẩu
+            const hashedPassword = bcrypt.hashSync(password, bcryptSalt);
+            console.log('Hashed password:', hashedPassword);
+    
+            // Tạo người dùng mới
             const userDoc = await User.create({
                 firstName,
                 lastName,
                 email,
-                password: bcrypt.hashSync(password, bcryptSalt),
+                password: hashedPassword,
             });
+    
+            console.log('User created:', userDoc);
             res.json(userDoc);
         } catch (e) {
-            res.status(422).json(e);
+            console.error('Error during user registration:', e);
+            res.status(422).json({ error: e.message });
         }
     }
-
     //[POST] /login
     async login(req, res) {
         const { email, password } = req.body;
