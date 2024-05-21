@@ -17,7 +17,7 @@ const Place = new Schema(
         checkOut: Number,
         maxGuests: Number,
         price: Number,
-        slug: { type: String, slug: 'name', unique: true },
+        slug: { type: String, slug: 'title', unique: true },
     },
     {
         timestamps: true,
