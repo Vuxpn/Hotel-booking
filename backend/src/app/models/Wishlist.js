@@ -1,8 +1,10 @@
 const { default: mongoose } = require('mongoose');
+const slug = require('mongoose-slug-updater');
 const mongooseDelete = require('mongoose-delete');
+const MongooseDelete = require('mongoose-delete');
 
 const Schema = mongoose.Schema;
-const WishListSchema = new Schema(
+const WishList = new Schema(
     {
         owner: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
         wishlist: [
@@ -10,13 +12,14 @@ const WishListSchema = new Schema(
                 place: { type: mongoose.Schema.Types.ObjectId, ref: 'Place' },
             },
         ],
+        slug: { type: String, slug: 'owner', unique: true },
     },
     {
         timestamps: true,
     },
 );
 
-// Thêm plugin và middleware
-WishListSchema.plugin(mongooseDelete, { deletedAt: true, overrideMethods: 'all' });
-
-module.exports = mongoose.model('WishList', WishListSchema);
+//add plugin
+mongoose.plugin(slug);
+WishList.plugin(MongooseDelete, { deletedAt: true, overrideMethods: 'all' });
+module.exports = mongoose.model('WishList', WishList);

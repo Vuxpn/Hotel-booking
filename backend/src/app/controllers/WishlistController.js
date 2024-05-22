@@ -1,4 +1,8 @@
 const Wishlist = require('../models/Wishlist');
+const User = require('../models/User');
+const Place = require('../models/Place');
+const Feedback = require('../models/Feedback');
+const Booking = require('../models/Booking')
 const jwt = require('jsonwebtoken');
 const jwtSecret = 'awuichaiuwchasasdwd123';
 const { multipleMongooseToObject } = require('../../util/mongoose');
