@@ -14,7 +14,7 @@ export default function PlacesPage() {
             <AccountNav />
             <div className="text-center">
                 <Link
-                    className="inline-flex gap-1 bg-primary text-white py-2 px-6 rounded-full"
+                    className="inline-flex gap-1 bg-primary text-white py-2 px-6 rounded-full font-semibold"
                     to={'/account/places/new'}
                 >
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
@@ -24,7 +24,7 @@ export default function PlacesPage() {
                             clipRule="evenodd"
                         />
                     </svg>
-                    Add new hotel
+                    Thêm khách sạn mới
                 </Link>
                 <div className="mt-4 mb-8">
                     {places.length > 0 &&
