@@ -82,14 +82,14 @@ export default function ProfilePage() {
                                 <h1 className="text-3xl font-semibold text-primary">Thông tin cá nhân</h1>
                                 <h2 className="text-slate-500 pt-1">Sửa thông tin cá nhân của bạn</h2>
                                 <img
-                                    className="h-32 border-2 rounded-full my-8"
+                                    className="h-32 border-2 border border-primary rounded-full my-8"
                                     src="https://i.pinimg.com/originals/39/a4/71/39a47159059f38a954d77e5dcae6f0db.jpg"
                                     alt="avatar"
                                 />
                                 <table className="table-auto">
                                     <tbody>
                                         <tr>
-                                            <td className="font-semibold">Họ và tênd đệm: </td>
+                                            <td className="font-semibold">Họ và tên đệm: </td>
                                             <td className="capitalize pl-10 md:pl-20 text-slate-500">
                                                 {userDoc[0].firstName}
                                             </td>
