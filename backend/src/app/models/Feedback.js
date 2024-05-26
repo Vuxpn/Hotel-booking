@@ -24,7 +24,7 @@ const Feedback = new Schema(
                 rate: Number,
             },
         ],
-        slug: { type: String, slug: 'name', unique: true },
+         slug: { type: String, slug: 'feedback', unique: true },
     },
     {
         timestamps: true,
